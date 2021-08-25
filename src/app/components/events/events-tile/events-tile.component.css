@@ -1,0 +1,10 @@
+div.date-participate-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.participate a {
+  margin-right: 15px;
+  text-decoration: none;
+}

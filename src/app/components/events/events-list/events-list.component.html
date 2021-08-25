@@ -1,0 +1,6 @@
+<div class="events-list">
+  <app-events-tile *ngFor="let event_ of displayedEventsList" [event]="event_"></app-events-tile>
+</div>
+
+<mat-paginator [length]="allEventsList.length" [pageSize]="numberOnPage" [showFirstLastButtons]="true"
+               (page)="logPage($event); updateDisplayedPages($event)"></mat-paginator>

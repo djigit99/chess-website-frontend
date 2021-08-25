@@ -1,0 +1,38 @@
+.header {
+  height: 300px;
+  width: 100%;
+  /*background-color: rebeccapurple;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-title {
+}
+
+img {
+  width: 80%; /* width of container */
+  height: 250px; /* height of container */
+  display: inline-block;
+  object-fit: cover;
+  /*object-position: 0 50px;*/
+  border: 2px solid #f8c85d;
+  box-sizing: border-box;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h1 {
+  margin: 0;
+  height: 125px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: content-box;
+  font-family: Segoe Print, sans-serif;
+  font-size: 50px;
+  color: darkkhaki;
+}
