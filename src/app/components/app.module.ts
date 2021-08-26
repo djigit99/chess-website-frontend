@@ -20,6 +20,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import { PuzzleListComponent } from './puzzles/puzzle-list/puzzle-list.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 const routes: Routes = [
   {path: 'news', component: NewsListComponent},
@@ -41,6 +42,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
@@ -52,7 +54,7 @@ const routes: Routes = [
     MatButtonModule,
     MatIconModule
   ],
-  providers: [MatDatepickerModule],
+  providers: [MatDatepickerModule, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

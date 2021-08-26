@@ -1,20 +1,22 @@
 import { Injectable } from '@angular/core';
 import {Puzzle} from "../../models/Puzzle";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PuzzleService {
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
 
-  getPuzzles(): Puzzle[] {
-    let puzzle = new Puzzle(
-      1,
-      "Знайдіть виграш за білих (5 очків).",
-      "/puzzles/1roz_20.jpg",
-      "",
-      ["Kgf5"]);
-    return [puzzle];
+  getPuzzles(): Array<Puzzle> {
+    const URL = 'http://localhost:8080/puzzle';
+
+    let puzzles: Array<Puzzle> = new Array<Puzzle>();
+    this.http.get<Puzzle[]>(URL)
+      .subscribe(puzzle => {
+        puzzle.forEach(val => puzzles.push(val));
+      });
+    return puzzles;
   }
 }

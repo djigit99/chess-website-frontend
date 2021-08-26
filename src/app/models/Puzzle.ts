@@ -3,9 +3,9 @@ export class Puzzle {
   description!: string;
   imageUrl!: string;
   userFirstMove!: string;
-  correctFirstMoves!: string[];
+  correctFirstMoves!: string;
 
-  constructor(id: number, description: string, imageUrl: string, userFirstMove: string, correctFristMoves: string[]) {
+  constructor(id: number, description: string, imageUrl: string, userFirstMove: string, correctFristMoves: string) {
     this.id = id;
     this.description = description;
     this.imageUrl = imageUrl;
